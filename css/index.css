@@ -255,20 +255,17 @@ body {
 }
 
 .visual {
-  background: pink;
   height: 120px;
   position: relative;
 }
 
 /* 메인콘텐츠 */
 .main {
-  background: blue;
   display: flow-root;
   padding: 30px 15px;
+  border-radius: 15px 15px 0 0;
+  min-height: 400px;
 }
-
-;
-
 
 .main::after {
   content: "";
@@ -279,7 +276,6 @@ body {
 /* 그룹 */
 .group {
   float: left;
-  background: skyblue;
   margin: 0 15px;
 }
 
@@ -294,6 +290,76 @@ body {
 .group3 {
   width: 190px;
 }
+
+/* 로그인 */
+.login {
+  background: orange;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.login fieldset {
+  padding-top: 10px;
+  background-color: white;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.login .user-pwd {
+  padding-top: 10px;
+}
+
+.login .sign {
+  background-color: white;
+  display: flex;
+  padding-top: 30px;
+  border-radius: 0px 0px 15px 15px;
+  padding-left: 5px;
+}
+
+.login h2 {
+  color: yellow;
+}
+
+.user-email,
+.user-pwd {
+  display: block;
+}
+
+.login .user-email,
+.login .user-pwd {
+  font-size: 14px;
+  width: 160px;
+}
+
+.login input {
+  width: 90px;
+  height: 16px;
+  border: 1px solid grey;
+  border-radius: 3px;
+  float: right;
+
+}
+
+.login label {
+  padding-left: 10px;
+}
+
+.login fieldset {
+  position: relative;
+}
+
+
+button.login-button {
+  border-radius: 3px;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  height: 50px;
+  border: orangered;
+  background-color: orange;
+  margin-right: 5px;
+}
+
 
 /* 슬로건 */
 .slogan {
