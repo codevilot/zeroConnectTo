@@ -405,36 +405,61 @@ body {
 
 /* 웹 관련 용어 */
 .term {
-  background: gray;
   margin-top: 20px;
+  background-color: linear-gradient(to bottom, #666, #999);
+  border: 1px solid #000;
+  border-radius: 5px;
   padding: 15px;
-  display: flow-root;
 }
 
 .term-title {
-  font-size: 18px;
   font-weight: 700;
-  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.term-list {
+  margin-top: 15px;
+
+}
+
+.odd .term-list-subject,
+.odd .term-list-brief,
+.even .term-list-thumbnail {
+  float: right;
+}
+
+.even .term-list-subject,
+.even .term-list-brief,
+.odd .term-list-thumbnail {
+  float: left
 }
 
 .term-list-subject {
-  float: right;
-  width: 150px;
-  margin-bottom: 10px;
-  color: skyblue;
-  font-weight: 600;
-
+  color: #296296;
+  width: 140px;
 }
 
 .term-list-thumbnail {
-  float: left;
-  margin-right: 10px
+  position: relative;
+  top: 2px;
 }
 
-/* .term-list-brief {
-  float: right;
-  width: 150px;
-} */
+.term-list div {
+  display: flow-root;
+  margin-top: 10px;
+}
+
+
+
+.term-list-thumbnail img {
+  vertical-align: top;
+}
+
+.term-list-brief {
+  width: 140px;
+  margin-top: 5px;
+  line-height: 1.5;
+}
 
 /* 슬로건 */
 .slogan {
