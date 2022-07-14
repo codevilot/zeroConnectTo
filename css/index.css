@@ -293,73 +293,88 @@ body {
 
 /* 로그인 */
 .login {
-  background: orange;
+  background: radial-gradient(circle at top, yellow, orange);
+  border-radius: 5px;
   padding: 10px;
-  border-radius: 15px;
+  box-shadow: 5px 5px 0 0 #aaa;
 }
 
-.login fieldset {
-  padding-top: 10px;
-  background-color: white;
-  border-radius: 15px 15px 0px 0px;
+.login-title {
+  color: #ff0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  /* 첫줄만 들여쓰기가 되고, 박스 사이즈에 영향을 주지 않는다 */
+  text-indent: 10px;
 }
 
-.login .user-pwd {
-  padding-top: 10px;
+.login-form {
+  margin-top: 10px;
+  background: #fff;
+  padding: 10px 10px 0 10px;
+  border-radius: 5px 5px 0 0;
 }
 
-.login .sign {
-  background-color: white;
-  display: flex;
-  padding-top: 30px;
-  border-radius: 0px 0px 15px 15px;
-  padding-left: 5px;
-}
-
-.login h2 {
-  color: yellow;
-}
-
-.user-email,
-.user-pwd {
-  display: block;
-}
-
-.login .user-email,
-.login .user-pwd {
-  font-size: 14px;
-  width: 160px;
-}
-
-.login input {
-  width: 90px;
-  height: 16px;
-  border: 1px solid grey;
-  border-radius: 3px;
-  float: right;
-
-}
-
-.login label {
-  padding-left: 10px;
-}
-
-.login fieldset {
+.login-form fieldset {
   position: relative;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 10px;
 }
 
+.user-email {
+  margin-bottom: 5px;
+}
 
-button.login-button {
-  border-radius: 3px;
+.login-button {
   position: absolute;
-  top: 10px;
   right: 0;
-  height: 50px;
-  border: orangered;
-  background-color: orange;
-  margin-right: 5px;
+  top: 0px;
+  width: 50px;
+  height: 53px;
+  padding: 0;
+  font-size: 1.3rem;
+  background: #ed552f;
+  border: 0;
+  border-radius: 4px;
+  color: white;
 }
 
+.login-form label {
+  width: 5rem;
+  display: inline-block;
+}
+
+.login-form input {
+  width: 90px;
+  height: 24px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 2px 2px 2px .5em;
+}
+
+.sign a {
+  display: block;
+  padding: 6px 0px;
+  font-size: 1.3rem;
+}
+
+.sign .icon-right-open::before {
+  color: #ed552f;
+}
+
+.sign {
+  background: #fff;
+  padding: 4px 10px;
+  border-radius: 0 0 5px 5px;
+  display: flow-root;
+}
+
+.sign li:first-child {
+  float: left;
+}
+
+.sign li:last-child {
+  float: right;
+}
 
 /* 슬로건 */
 .slogan {
