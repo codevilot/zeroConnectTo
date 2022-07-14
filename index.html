@@ -148,34 +148,30 @@
   <main class="main">
     <div class="group group1">
       <section class="login">
-        <h2>
-          로그인
-        </h2>
-        <div>
-
-          <div>
-            <h3>아이디</h3>
-            <input type="text"  id="id"/>
+       <h2 class="login-title">로그인</h2>
+       <form method="POST" action="https://formspree.io/seulbinim@gmail.com" class="login-form">
+        <fieldset>
+          <legend>
+            회원 로그인 폼
+          </legend>
+          <div class="user-email">
+            <label for="userEmail">아이디</label><input type="email" id="userEmail" required="required" placeholder="guest@zerobase.com"/>
           </div>
-          <div>
-            <h3>비밀번호</h3>
-            <input type="text" id="암호" />
+          <div class="user-pwd">
+            <label for="userPwd">비밀번호</label><input type="password" id="userPwd" required="required" placeholder="8자리 이상"/>
           </div>
+          <button type="submit" class="login-button">로그인</button>
+        </fieldset>
+       </form>
+       <ul class="sign">
+        <li>
+          <a href="" class="icon-right-open">회원가입</a>
+        </li>
+        <li>
+          <a href="" class="icon-right-open">아이디/비밀번호 찾기</a>
           
-          <div>
-            <button>로그인</button>
-          </div>
-        </div>
-        <span>
-          <a href="">
-            <span>&#62; </span> 
-            <h3>회원가입</h3>
-          </a>
-          <a href="">
-            <span>&#62; </span> 
-            <h3>아이디/비밀번호 찾기</h3>
-          </a>
-        </span>
+        </li>
+       </ul>
       </section>
     </div>
     <div class="group group2">그룹2</div>
