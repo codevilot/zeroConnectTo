@@ -376,6 +376,33 @@ body {
   float: right;
 }
 
+/* 유효성 파트 */
+.validation-list {
+  background: aqua;
+  margin-top: 25px;
+}
+
+.validation-list li {
+  margin-top: 10px;
+}
+
+.validation-list a {
+  background:
+    url("./images/validation_icon.png") no-repeat 20px 50%/ 20px 20px,
+    #aaa linear-gradient(to bottom, #ccc, #aaa);
+  /* background-size: 10px 10px; */
+  display: block;
+  padding: 10px 10px 10px 45px;
+  /* padding-left: 45px; */
+  border-radius: 100px;
+}
+
+.validation-list a:hover,
+.validation a:focus {
+  color: #f00;
+  background-size: 14px 14px, 100%;
+}
+
 /* 슬로건 */
 .slogan {
   background: lime;
