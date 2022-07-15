@@ -502,41 +502,66 @@ body {
 }
 
 /* board */
+/* 공지사항 및 자료실 */
 .board {
   margin-top: 20px;
+  /* background: yellow; */
+  background: white;
+  position: relative;
 }
 
-/* .board-list ul {
-  display: flex;
-  flex-direction: column;
-} */
+.board-tab {
+  position: absolute;
+  top: 0;
+  border-radius: 10px 10px 0px 0px;
+  border: 1px solid darkgray;
+  color: grey;
+}
 
-.board h3 {
-  float: left;
-  padding: 5px;
+
+.archive .notice-tab {
+  left: 63px;
+}
+
+.is-select .board-tab {
   border: 1px solid orange;
   border-bottom: 1px transparent;
-  border-radius: 5px;
+  background: none;
 }
 
-.board h3::after {
-  clear: both
+.board-section.is-select ul,
+.board-section.is-select .board-more {
+  display: block;
 }
 
-.board-detail-button {
-  float: right;
-}
-
-.board-list-date {
-  text-align: right;
-}
-
-.board-list {
-  display: flex
-}
-
-.data {
+.board-section ul,
+.board-section .board-more {
   display: none;
+}
+
+.board-more {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.board-more::before {
+  color: green;
+}
+
+.board-panel {
+  display: block;
+  padding-top: 30px;
+}
+
+.board-panel li {
+  padding-bottom: 5px;
+}
+
+.board time {
+  float: right;
+  padding-right: 10px;
+
 }
 
 /* 슬로건 */
