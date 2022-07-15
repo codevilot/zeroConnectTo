@@ -501,6 +501,44 @@ body {
   border-radius: 4px;
 }
 
+/* board */
+.board {
+  margin-top: 20px;
+}
+
+/* .board-list ul {
+  display: flex;
+  flex-direction: column;
+} */
+
+.board h3 {
+  float: left;
+  padding: 5px;
+  border: 1px solid orange;
+  border-bottom: 1px transparent;
+  border-radius: 5px;
+}
+
+.board h3::after {
+  clear: both
+}
+
+.board-detail-button {
+  float: right;
+}
+
+.board-list-date {
+  text-align: right;
+}
+
+.board-list {
+  display: flex
+}
+
+.data {
+  display: none;
+}
+
 /* 슬로건 */
 .slogan {
   background: lime;
