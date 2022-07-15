@@ -467,7 +467,7 @@ body {
   border: 1px solid #aaa;
   border-radius: 10px 10px 0 0;
   padding: 15px 25px 10px;
-  border-bottom-color:#fff
+  border-bottom-color: #fff
 }
 
 .search-form fieldset {
@@ -482,6 +482,7 @@ body {
 }
 
 .search-form input {
+  -webkit-appearnce: none;
   border: 1px solid #aaa;
   height: 24px;
   border-radius: 4px 4px 0 0;
