@@ -578,13 +578,58 @@ body {
   display: flex;
   flex-flow: row wrap;
   gap: 10px;
-  /* flex-basis: */
+
 }
 
 .board-section.is-select .board-panel,
 .board-section.is-select .board-more {
   display: flex !important;
 }
+
+.board-list {
+  display: none;
+}
+
+.is-select.board-list {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+}
+
+.board-list li {
+  display: flex;
+  width: 100%;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.board-list a {
+  flex-grow: 1;
+  white-space: nowrap;
+  width: 300px;
+  overflow: hidden;
+  padding: 4px 0;
+  text-overflow: ellipsis;
+}
+
+.tab {
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 0 0;
+  background: #ccc;
+  padding: 10px 16px;
+  color: #666;
+}
+
+.tab[aria-selected="true"] {
+  background: #fff;
+  color: #d16527;
+  border-color: currentColor currentColor #fff currentColor;
+}
+
+.tab-panel {
+  padding-top: 20px;
+}
+
 
 /* 슬로건 */
 .slogan {
