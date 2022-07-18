@@ -378,7 +378,6 @@ body {
 
 /* 유효성 파트 */
 .validation-list {
-  background: aqua;
   margin-top: 25px;
 }
 
@@ -570,9 +569,6 @@ body {
 
 }
 
-.board-more::before {
-  color: hsla(110, 50%, 30%, 1)
-}
 
 .board-section.is-select .board-panel {
   display: flex;
@@ -632,72 +628,79 @@ body {
 
 /* 새소식 */
 .news {
-  /* background: yellow; */
   margin-top: 20px;
   position: relative;
 }
 
-.news h2 {
-  color: orange;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.news .news-title::after {
+.news::before {
   content: "";
-  display: block;
-  width: 100%;
-  background: linear-gradient(to right, lightgray, white);
-  height: 2px;
-}
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 80%;
+  height: 1px;
+  background: #aaa linear-gradient(to right, #aaa, #fff);
 
-.news-item-title {
-  font-weight: bold;
-}
-
-.news-item-brief {
-  padding-top: 10px;
-}
-
-.news-item {
-  display: flow-root;
-  padding-top: 20px;
-}
-
-.news-item-title,
-.news-item-date,
-.news-item-brief {
-  float: right;
-  width: 250px;
-}
-
-.news-item-title::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-.news figcaption {
-  padding-top: 10px;
-  font-weight: bold;
-  font-size: 16px;
 }
 
 .news-item-thumbnail img {
-  box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 15px #aaa;
+
 }
 
-.news .more::before {
-  color: green;
+.news-link {
+  display: block;
+  border-top: 1px solid transparent;
 }
 
-.news .more {
+.news-item {
+  margin-top: 35px;
+  padding-left: 130px;
+  position: relative;
+  min-height: 115px;
+}
+
+.news-item-title {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.news-title {
+  color: #d16527;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.news-item-brief {
+  line-height: 1.5;
+  margin-top: 10px;
+  text-align: justify;
+}
+
+.news-item-thumbnail {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
+  text-align: center;
+
+}
+
+.news-item-thumbnail figcaption {
+  margin-top: 15px;
+}
+
+.news-more {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 9px;
 }
 
 /* 380 , 112, 18 text 250px */
+/* 공지사항 자료실 새소식 인기사이트 더보기 링크 웹폰트 글자 색상 일괄 적용 */
+.more::before {
+  color: hsla(110, 50%, 30%, 1)
+}
 
 /* 슬로건 */
 .slogan {
