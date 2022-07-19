@@ -719,22 +719,48 @@ body {
 
 }
 
-.event-title {
-  height: 1.5rem;
+.event-title,
+.related-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.related {
+  padding-top: 10px;
+}
+
+.related-list {
+  margin-top: 10px;
+  background: #fff;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  height: 27px;
+  overflow: hidden;
+  transition: height 400ms, padding 400ms 400ms;
+}
+
+.related-list:hover,
+.related-list:focus {
+  height: 147px;
+  padding-top: 10px;
 }
 
 
+.related-list a {
+  display: block;
+  line-height: 25px;
+  padding: 0 0 0 20px;
+}
 
-.event-button-wrapper {
+/* .event-button-wrapper {
   width: 40px;
   height: 20px;
-  background: yellow;
   margin-left: auto;
   height: 18px;
   overflow: hidden;
   display: flex;
   gap: 5px
-}
+} */
 
 /* .event-button-prev,
 .event-button-next */
@@ -754,7 +780,6 @@ body {
 } */
 .event-button-container {
   padding: 4px;
-  background: yellow;
   margin-left: auto;
   display: flex;
   flex-flow: row nowrap;
@@ -782,7 +807,6 @@ body {
 }
 
 .event-detail {
-  background: skyblue;
   width: 100%;
 }
 
@@ -802,6 +826,9 @@ body {
 .accent-color {
   color: #d16527;
 }
+
+/* 관련된 사이트 */
+
 
 /* 공지사항 자료실 새소식 인기사이트 더보기 링크 웹폰트 글자 색상 일괄 적용 */
 .more::before {
