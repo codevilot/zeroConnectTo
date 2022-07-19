@@ -696,9 +696,87 @@ body {
   padding: 9px;
 }
 
+.group3 {
+  width: 180px;
+
+  background: #eee;
+  border-radius: 10px;
+}
+
+/* 신규 이벤트 */
+.event {
+  position: relative;
+  padding: 10px;
+  border-bottom: 1px solid black;
+  border-radius: 10px 10px 0 0;
+}
+
+.event-title,
+.related-title {
+  font-size: 16px;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+.event-button-wrapper {
+
+  position: absolute;
+  top: 8px;
+  right: 10px;
+}
+
+
+.event-button-prev {
+  background-position: 0;
+}
+
+.event-button-next {
+  background-position: 18px;
+}
+
+.event-button-prev,
+.event-button-next {
+  font-size: 0;
+  background-color: transparent;
+  border: 0;
+  background-image: url("./images/backpage_forwardpage.png");
+  width: 18px;
+  height: 18px;
+}
+
+.event-thumbnail {
+  padding-bottom: 10px;
+}
+
+.event-thumbnail img {
+  box-shadow: 5px 5px 5px darkgray;
+}
+
+.related {
+  padding: 10px;
+}
+
+.related-list {
+  border: 1px solid #666;
+  border-radius: 5px;
+  padding: 5px 20px;
+}
+
+.related-list li.selected {
+  display: block;
+}
+
+.related-list li {
+  display: none;
+}
+
 /* 공지사항 자료실 새소식 인기사이트 더보기 링크 웹폰트 글자 색상 일괄 적용 */
 .more::before {
   color: hsla(110, 50%, 30%, 1)
+}
+
+.accent-color {
+  color: #d16527;
 }
 
 /* 슬로건 */
