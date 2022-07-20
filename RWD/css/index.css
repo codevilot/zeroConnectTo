@@ -1,0 +1,16 @@
+@import url(./normalize.css);
+@import url(./a11y.css);
+@import url(./theme.csswhite);
+@import url(./base.css);
+/* import는 느리기 떄문에 빠르게 하기위해서는 여러개를 선언할때 link를 쓰는 것이 좋다 */
+
+/* 공통 아이콘(Font Awesome) */
+.far {
+  margin-right: var(--spacing-xs);
+}
+/* 모든 디바이스 (All device)*/
+/* 공통 */
+
+
+/* 모바일 디바이스 (Mobile Device) */
+  
