@@ -164,24 +164,39 @@ button {
   color: var(--accent-favorite);
 }
 
-/* 공통 추천 서적 */
-.book {
-  background: pink;
-  text-align: center;
-  font-size: var(--text-md);
+/* 공통 메인 콘텐츠 섹션 본문 */
+.appMain [class*="__summary"] {
+  line-height: 1.5;
+  margin-top: var(--spacing-base);
 }
 
-.book img {
+/* 공통 추천 서적 */
+.book {}
+
+.book__cover {
+  width: 70%;
+  border: 10px solid blue;
   margin-left: auto;
   margin-right: auto;
-  display: block;
+  text-align: center;
 }
 
-.book__summary {
-  text-align: left;
+.book__coverCaption {
+  margin-top: var(--spacing-base);
+}
+
+.book__info {
+  text-align: center;
+}
+
+.book__info dt:nth-child(1),
+.book__info dd:nth-child(2) {
+  display: inline-block;
 }
 
 .ratingStar {
+  font-size: var(--text-xl);
+  text-align: center;
   color: var(--accent-book);
 }
 
