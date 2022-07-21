@@ -115,37 +115,98 @@ button {
     flex-grow: 1;
   }
 
-  .button--burger {
+  .button-wrapper {
     position: absolute;
     top: 3.75rem;
     right: var(--spacing-md);
-    width: 50px;
-    height: 50px;
-    /* background: yellow; */
+    width: 2rem;
+    height: 2rem;
+    overflow: hidden;
+    transform: translate(-0.1rem)
+  }
+
+  .button--burger {
+
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    top: -1px;
+  }
+
+  .button--burger:focus {
+    outline-offset: 2px;
   }
 
   .button--burgerBarTop,
-  .button--burgerBarMiddle,
-  .button--burgerBarBottom {
+  .button--burgerBarBottom,
+  .button--burgerBarMiddle {
+    position: absolute;
+    height: 20%;
+    background: var(--white);
+    border-radius: 0.25rem;
     width: 100%;
-    height: 10px;
-    background-color: white;
-    display: block;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    transition: all 200ms;
+    left: 0;
+    transition: all 400ms;
   }
 
-  .is--active .button--burgerBarMiddle {
-    opacity: 0;
+  .button--burgerBarTop {
+    top: 0%;
   }
 
-  .is--active .button--burgerBarTop {
-    transform: translateY(200%) rotate(45deg)
+  .button--burgerBarMiddle {
+    top: 50%;
+    transform: translateY(-50%)
   }
 
-  .is--active .button--burgerBarBottom {
-    transform: translateY(-200%) rotate(-45deg)
+  .button--burgerBarBottom {
+    top: 100%;
+    transform: translateY(-100%)
+  }
+
+  .button--burger.is--active .button--burgerBarMiddle {
+    transform: translate(-120%, -50%);
+  }
+
+  .button--burger.is--active .button--burgerBarTop {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg)
+  }
+
+  .button--burger.is--active .button--burgerBarBottom {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg)
+  }
+
+
+
+  nav.is--active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    padding: 2rem;
+    background: rgba(29, 180, 130, 0.8);
+    backdrop-filter: blur(5px);
+    transform: translateX(0%)
+  }
+
+  nav {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    padding: 2rem;
+    background: rgba(29, 180, 130, 0.8);
+    backdrop-filter: blur(5px);
+    transform: translateX(-100%);
+    transition: 400ms all;
+  }
+
+  .menu__item {
+    padding-bottom: 1rem;
+    font-weight: 700;
   }
 }
 
@@ -176,6 +237,27 @@ button {
   /* 데스크탑 메인메뉴 제어버튼 */
   .button--burger {
     display: none;
+  }
+
+  nav {
+    background-color: var(--brown)
+  }
+
+  .menu__list {
+    display: flex;
+    flex-flow: row nowrap;
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding: var(--spacing-base) var(--spacing-md);
+    justify-content: space-between;
+
+  }
+
+  .menu__link {
+    color: var(--white);
+    -webkit-text-stroke: 1px #000;
+    font-weight: 700;
   }
 }
 
