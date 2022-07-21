@@ -31,7 +31,7 @@
   display: flex;
   position: relative;
   flex-flow: column nowrap;
-  padding: var(--spacing-base) var(--spacing-md);
+  padding: var(--spacing-base) var(--spacing-lg);
   gap: var(--spacing-xs);
 }
 
@@ -101,6 +101,72 @@ button {
   font-weight: 700;
 }
 
+/* 공통 메인 콘텐츠*/
+.appMain {
+  padding: var(--spacing-base) var(--spacing-lg);
+}
+
+.appMain h2 {
+  font-size: var(--text-md);
+  font-weight: 700;
+}
+
+.appMain h2 span {
+  display: block;
+  font-size: var(--text-sm);
+}
+
+/* 공통 메인 콘텐츠 섹션 제목 */
+.book__title:before,
+.news__title:before,
+.board__title:before,
+.favorite__title:before,
+.twitter__title:before {
+  float: left;
+  content: "";
+  display: block;
+  width: 58px;
+  height: 59px;
+  background-image: url(../assets/images/sprite_main.png);
+  margin-right: var(--spacing-xs)
+}
+
+.board__title:before {
+  background-position-y: -115px;
+}
+
+.news__title:before {
+  background-position-y: -230px;
+}
+
+.favorite__title:before {
+  background-position-y: -345px;
+}
+
+.twitter__title:before {
+  background-position-y: -460px;
+}
+
+.book__title span {
+  color: var(--green);
+}
+
+.news__title span {
+  color: var(--brown);
+}
+
+.favorite__title span {
+  color: var(--orange);
+}
+
+.twitter__title span {
+  color: var(--blue);
+}
+
+.board__title span {
+  color: var(--brown);
+}
+
 /* 모바일 디바이스 (Mobile Device) */
 @media(min-width:320px) and (max-width:767px) {
 
@@ -125,7 +191,7 @@ button {
   .button-wrapper {
     position: absolute;
     top: 3.75rem;
-    right: var(--spacing-md);
+    right: var(--spacing-lg);
     width: 2rem;
     height: 2rem;
     overflow: hidden;
@@ -192,7 +258,7 @@ button {
     width: 70%;
     height: 100vh;
     backdrop-filter: blur(4px);
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg);
     transform: translateX(-150%);
     transition: 300ms all;
   }
@@ -238,7 +304,7 @@ button {
   /* 데스크탑 메인 메뉴 */
   .menu {
     background: var(--secondary-color);
-    padding: var(--spacing-base) var(--spacing-md);
+    padding: var(--spacing-base) var(--spacing-lg);
   }
 
   .menu__list {
@@ -249,12 +315,19 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg);
   }
 
   .menu__link {
     color: var(--white);
     text-shadow: 1px 1px 0 var(--black), -1px -1px 0 var(--black);
+  }
+
+  .appMain {
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: yellow;
   }
 }
 
