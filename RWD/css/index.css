@@ -177,7 +177,12 @@ button {
     transform: translateY(-50%) rotate(-45deg)
   }
 
+  .menu {
+    background: var(--accent-opacity-color);
+    position: fixed;
+  }
 
+  /* 
 
   nav.is--active {
     position: fixed;
@@ -207,7 +212,7 @@ button {
   .menu__item {
     padding-bottom: 1rem;
     font-weight: 700;
-  }
+  } */
 }
 
 /* 데스크탑 디바이스 (Desktop Device) */
