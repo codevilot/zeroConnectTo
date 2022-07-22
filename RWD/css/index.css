@@ -267,10 +267,10 @@ button {
 }
 
 /* 공통 인기사이트 */
-.favorite__link::after {
-  content: "" attr(data-tooltip) "";
-  color: var(--accent-favorite);
-  padding-right: 0.5rem;
+
+.favorite__item {
+  margin-top: var(--spacing-xs);
+
 }
 
 /* 모바일 디바이스 (Mobile Device) */
@@ -375,6 +375,14 @@ button {
 
   .menu.is--active {
     transform: none;
+  }
+
+  /* 모바일 인기 사이트 */
+  .favorite__link::after {
+    content: attr(data-tooltip);
+    margin-left: var(--spacing-xs);
+    color: var(--accent-favorite);
+    font-size: var(--tet-sm);
   }
 }
 
