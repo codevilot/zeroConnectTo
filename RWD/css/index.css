@@ -2,7 +2,18 @@
 @import url(./a11y.css);
 @import url(./theme.css);
 @import url(./base.css);
+
 /* import는 느리기 떄문에 빠르게 하기위해서는 여러개를 선언할때 link를 쓰는 것이 좋다 */
+html {
+  font-size: 16px;
+  overflow-y: visible;
+}
+
+body {
+  font-family: "Spoqa Han Sans Neo", "Sans-serif";
+  font-size: inherit;
+  background-color: #fff
+}
 
 /* 공통 아이콘(Font Awesome) */
 .far {
@@ -166,6 +177,7 @@ button {
   color: var(--accent-favorite);
 }
 
+
 /* 공통 메인 콘텐츠 섹션 본문 */
 .appMain [class*="__summary"] {
   line-height: 1.5;
@@ -271,6 +283,27 @@ button {
 .favorite__item {
   margin-top: var(--spacing-xs);
 
+}
+
+/* 공통 트위터 */
+.twitter__userInfo {
+  display: flex;
+}
+
+.twitter__userName {
+  font-weight: bold;
+  padding-right: var(--spacing-xs);
+}
+
+
+.twitter__userProfileImage {
+  border-radius: 100%;
+  float: right;
+}
+
+.themeBlue {
+
+  color: var(--accent-twitter)
 }
 
 /* 모바일 디바이스 (Mobile Device) */
@@ -383,6 +416,10 @@ button {
     margin-left: var(--spacing-xs);
     color: var(--accent-favorite);
     font-size: var(--tet-sm);
+  }
+
+  .twitter {
+    margin-top: var(--spacing-lg)
   }
 }
 
