@@ -237,39 +237,33 @@ button {
 
 /* 공통 게시판 */
 .board {
-  position: relative;
+  position: relative
+}
+
+.board__item {
+  display: flex;
+  flex: row nowrap;
+  margin-top: var(--spacing-xs);
+}
+
+.board__link {
+  width: calc(100% - 6rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.board__date {
+  flex-grow: 1;
+  text-align: right;
 }
 
 .board__more {
   position: absolute;
-  min-height: 3.75rem;
-  top: 0.5rem;
+  top: 0;
   right: 0;
-}
-
-.board__item {
-  padding: 0.5rem;
-}
-
-.board__item time {
-  float: right;
-}
-
-.board__link {
-  width: 300px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: inline-block;
-}
-
-.themeBrown::before {
-  color: var(--accent-board);
-}
-
-.themeOrange::before {
-  color: var(--accent-favorite);
-
+  padding: var(--spacing-xs);
+  transform: translateX(var(--spacing-xs))
 }
 
 /* 공통 인기사이트 */
