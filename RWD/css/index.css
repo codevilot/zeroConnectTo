@@ -287,22 +287,33 @@ button {
 
 /* 공통 트위터 */
 .twitter__userInfo {
-  display: flex;
+  display: inline-flex;
+  gap: var(--spacing-xs);
 }
 
-.twitter__userName {
-  font-weight: bold;
-  padding-right: var(--spacing-xs);
+
+.twitter__userProfile {
+  float: right;
+  width: 50px;
+  height: 50px;
+  max-width: 110px;
+  shape-outside: circle(50%);
 }
 
+.twitter__userProfile img {
+  /* width: 100%; */
+  /* height: 100%; */
+  object-fit: contain;
+}
 
 .twitter__userProfileImage {
-  border-radius: 100%;
-  float: right;
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  vertical-align: top;
 }
 
-.themeBlue {
 
+.themeBlue {
   color: var(--accent-twitter)
 }
 
@@ -478,7 +489,15 @@ button {
     max-width: var(--container-width);
     margin-left: auto;
     margin-right: auto;
-    background-color: yellow;
+  }
+
+  /* 데스크탑 트위터 */
+
+
+  .twitter__userProfile {
+    width: 100%;
+    height: 100%;
+    /* object-fit: c; */
   }
 }
 
