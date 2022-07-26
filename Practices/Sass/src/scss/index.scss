@@ -5,13 +5,5 @@
 }
 
 .appFooter {
-  @include mobile {
-    background: yellow;
-  }
-
-  @include desktop {
-    background: skyblue;
-  }
-
-  ;
+  @include boxSizeMinMax
 }

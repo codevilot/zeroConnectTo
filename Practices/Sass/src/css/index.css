@@ -29,15 +29,11 @@
   align-items: center;
 }
 
-@media (max-width: 767px) {
-  .appFooter {
-    background: yellow;
-  }
-}
-@media (min-width: 768px) {
-  .appFooter {
-    background: skyblue;
-  }
+.appFooter {
+  min-width: 768px;
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*# sourceMappingURL=index.css.map */
