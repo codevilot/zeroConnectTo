@@ -1,6 +1,4 @@
-$color-primary: pink;
-$url-images: "/assets/images/";
-$w: 200px;
+@use "./utils" as *;
 
 .box {
   width: $w;
@@ -10,4 +8,74 @@ $w: 200px;
 
 .box a {
   font-size: 20px;
+}
+
+@import '../css/import.css'; //파일 불러오기
+$red : #833; //변수 선언
+$combined-color : mix(blue, red, 10%); //blue10% red90% 섞은 색
+
+.class1 {
+  background: $red; //변수 사용
+
+  &__inside {
+    //.class__inside
+    color: $combined-color;
+  }
+
+  &:hover {
+    //&는 .class1이다 &:hover = .class1:hover
+    background: red;
+  }
+}
+
+@mixin load-background {
+  //변수없는 mixin 선언
+  background: black;
+}
+
+@mixin load-size($n) {
+  //변수있는 mixin 선언
+  font-size: $n * 1rem;
+}
+
+@mixin load-height($h: 10px) {
+  //기본값 있는 변수 mixin 선언
+  height: $h*10
+}
+
+@mixin load-color($color: $red) {
+  color: $color //변수를 기본 값으로 사용하는 mixin
+}
+
+.class2 {
+  @include load-background; //변수 없는 mixin 사용
+  @include load-size(4); //변수 있는 mixin 사용
+  @include load-height(2); //기본값 있는 변수 mixin
+  @extend .class1; //class1의 값을 가져오기 
+}
+
+@for $x from 1 through 70 {
+
+  //1부터 70까지 
+  .font-size-#{$x} {
+    //font-size-1 to font-size-70
+    font-size: 0px + $x; //font-size-1:1px to font-size-70:70px;
+  }
+}
+
+$bg: pink;
+$bg-mobile: red;
+
+p {
+  @if $bg ==pink {
+    color: blue;
+  }
+
+  @else if $bg-mobile ==red {
+    color: green;
+  }
+
+  @else {
+    color: grey;
+  }
 }
