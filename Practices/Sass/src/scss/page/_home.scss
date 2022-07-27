@@ -17,42 +17,99 @@
 }
 
 .appMain {
+  padding-top: rem(20px);
   max-width: 67rem;
   margin-left: auto;
   margin-right: auto;
-  display: grid;
 
-  // @include desktop {
-  //   @include gridbox(12, 10);
-  // }
 
-  grid-template-columns: repeat(11, 1fr);
+  @include desktop {
+    display: grid;
+    // @include gridbox(12, 10);
+    grid-template-columns: repeat(11, 1fr);
+
+  }
+
 }
 
 .news {
   grid-column-start: 1;
   grid-column-end: 12;
 
+  &__videoContainer {
+    padding-bottom: rem(20px)
+  }
+
+
 }
 
 .book {
+  &__coverCaption {
+    text-align: left;
+    font-weight: 700;
+  }
+
+  &__info {
+    font-weight: 700;
+  }
+
   grid-column-start: 1;
   grid-column-end: 3;
+
 }
 
 .twitter {
   grid-column-start: 8;
   grid-column-end: 12;
+
+  &__userProfile {
+    float: right;
+    width: 20%;
+    max-width: 100px;
+    height: 110px;
+  }
+
+  &__userProfileImage {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 30% 40%;
+  }
+
+  &__userInfo {
+    display: flex;
+  }
+
+  a {
+    color: $accent-twitter;
+  }
 }
 
 .favorite {
   grid-column-start: 5;
   grid-column-end: 8;
+
+
 }
 
 .board {
   grid-column-start: 3;
-  grid-column-end: 12
+  grid-column-end: 12;
+
+  &__date {
+    float: right;
+  }
+
+  &__more {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__link .accentBoard:before {
+    margin-right: rem(10px)
+  }
 }
 
 .book,
@@ -77,30 +134,54 @@
   position: relative;
 
   &__title {
+    width: 100%;
     align-items: flex-start;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-bottom: rem(20px);
   }
 
   &__enTitle {
     display: block;
+    word-break: keep-all;
+  }
+
+  &__summary {
+    padding-bottom: rem(20px)
+  }
+
+  a {
+    color: $black;
   }
 }
 
-.book__cover {
-  text-align: center;
+.book {
+  width: fit-content;
+
+
+  &__coverCaption {
+    margin-top: rem(16px);
+    text-align: center;
+  }
+
+  &__info {
+    @include marginY;
+
+    dt:first-child {
+      margin-right: rem(18px);
+    }
+
+    @include flexbox($j: center, $w: wrap);
+  }
+
+  .ratingStar {
+    width: 100%;
+
+  }
+
 }
 
-.board__date {
-  float: right;
-}
-
-.board__more {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
 
 .iframeWrapper {
   @include responseIframe

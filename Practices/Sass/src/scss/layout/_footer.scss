@@ -1,0 +1,21 @@
+@use "../utils/" as *;
+
+.appFooter {
+  background-color: $primary-color;
+  padding-top: rem(24px);
+  padding-bottom: rem(24px);
+  text-align: center;
+  color: $white;
+
+  .address {
+    padding-bottom: rem(16px);
+
+    @include mobile {
+      @include flexbox (column);
+    }
+  }
+
+  a {
+    color: $white;
+  }
+}

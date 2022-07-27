@@ -2,6 +2,20 @@
 @use "./layout";
 @use "./page";
 
+html {
+  font-size: 16px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+section,
+article {
+  margin-bottom: 3rem;
+  padding: 2rem;
+}
+
 .a11yHidden {
   @include a11yHidden
 }
