@@ -5,11 +5,64 @@
   padding: rem(4px) rem(8px);
   border-radius: rem(4px);
 
+  &--none {
+    border: none;
+    background: transparent;
+    padding: 0;
+  }
+
   &--fill {
     background: $secondary-color;
-    color: $white;
     height: rem(32px);
     font-size: rem(14px);
+  }
+
+  &--burger {
+    width: rem(42px);
+    position: relative;
+    height: rem(42px);
+    background: none;
+    border: none;
+    padding: 0px;
+
+    &BarTop,
+    &BarMiddle,
+    &BarBottom {
+      background-color: white;
+      position: absolute;
+      display: block;
+      width: rem(42px);
+      height: rem(5px);
+      border-radius: 10px;
+      transition: all 350ms;
+    }
+
+    &BarTop {
+      top: 0;
+    }
+
+    &BarMiddle {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &BarBottom {
+      top: 100%;
+      transform: translateY(-100%);
+
+    }
+
+    .is--active &BarTop {
+      @include transRotate(0%, 50%, 45)
+    }
+
+    .is--active &BarMiddle {
+      @include transRotate(-120%);
+    }
+
+    .is--active &BarBottom {
+      @include transRotate(0%, 50%, -45);
+    }
   }
 
   &--primary {}

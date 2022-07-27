@@ -8,6 +8,141 @@
   margin: -1px;
 }
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 /* 1024px */
 .accentBook {
   color: #abd375;
@@ -60,6 +195,61 @@
   padding: 0.25rem 0.5rem;
 }
 
+.button {
+  border: 0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+.button--none {
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+.button--fill {
+  background: #988574;
+  height: 2rem;
+  font-size: 0.875rem;
+}
+.button--burger {
+  width: 2.625rem;
+  position: relative;
+  height: 2.625rem;
+  background: none;
+  border: none;
+  padding: 0px;
+}
+.button--burgerBarTop, .button--burgerBarMiddle, .button--burgerBarBottom {
+  background-color: white;
+  position: absolute;
+  display: block;
+  width: 2.625rem;
+  height: 0.3125rem;
+  border-radius: 10px;
+  transition: all 350ms;
+}
+.button--burgerBarTop {
+  top: 0;
+}
+.button--burgerBarMiddle {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.button--burgerBarBottom {
+  top: 100%;
+  transform: translateY(-100%);
+}
+.is--active .button--burgerBarTop {
+  top: 50%;
+  transform: translate(0%, -50%) rotate(45deg);
+}
+.is--active .button--burgerBarMiddle {
+  top: 50%;
+  transform: translate(120%, 50%) rotate(0deg);
+}
+.is--active .button--burgerBarBottom {
+  top: 50%;
+  transform: translate(0%, -50%) rotate(-45deg);
+}
 .appHeader {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -86,7 +276,22 @@
     background: yellow;
   }
 }
+.appHeader .buttonWrapper {
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .appHeader .buttonWrapper {
+    position: absolute;
+    right: 1.25rem;
+    top: 2.5rem;
+  }
+}
 
+.logo {
+  position: absolute;
+  top: 2.5rem;
+  left: 0.625rem;
+}
 @media (min-width: 768px) {
   .logo {
     position: absolute;
@@ -98,13 +303,13 @@
   display: block;
   width: 12.75rem;
   height: 3.6875rem;
-  background-image: url("./../assets/imageswebcafe-logo.png");
+  background-image: url("./../assets/images/webcafe-logo.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi) {
   .logo__link {
-    background-image: url("./../assets/imageswebcafe-logo@2x.png");
+    background-image: url("./../assets/images/webcafe-logo@2x.png");
   }
 }
 
@@ -123,9 +328,14 @@
     letter-spacing: -0.2em;
   }
 }
+@media (max-width: 767px) {
+  .memberOnly a {
+    color: #fff;
+  }
+}
 
 .searchForm {
-  margin-top: 1rem;
+  margin-top: 3.125rem;
 }
 .searchForm__group {
   display: flex;
@@ -149,6 +359,26 @@
 }
 .searchForm .button--primary {
   margin-left: 1rem;
+}
+
+@media (min-width: 768px) {
+  .button--burger {
+    display: none;
+  }
+}
+
+.a11yHidden {
+  overflow: hidden;
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+legend {
+  display: none;
 }
 
 /*# sourceMappingURL=index.css.map */

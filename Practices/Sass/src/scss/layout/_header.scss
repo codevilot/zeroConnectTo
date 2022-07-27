@@ -16,13 +16,29 @@
     @include boxSizeMax;
     background: yellow;
   }
+
+  .buttonWrapper {
+    overflow: hidden;
+
+    @include mobile {
+      //위치 지정
+      position: absolute;
+      right: rem(20px);
+      top: rem(40px);
+    }
+  }
+
+
 }
 
 //로고
 .logo {
+  position: absolute;
+  top: rem(40px);
+  left: rem(10px);
+
   @include desktop {
     @include posCenterY;
-
   }
 
   &__link {
@@ -31,12 +47,13 @@
     $h: rem(59px);
     width: $w;
     height: $h;
-    @include bgRetina("webcafe-logo", "png")
+    @include bgRetina("/webcafe-logo", "png")
   }
 }
 
 // 멤버서비스
 .memberOnly {
+
   @include flexbox($j: flex-end);
 
   @include mobile {
@@ -45,11 +62,16 @@
     @include textStyle(14px);
   }
 
+  a {
+    @include mobile {
+      color: $white;
+    }
+  }
 }
 
 // 검색폼
 .searchForm {
-  margin-top: rem(16px);
+  margin-top: rem(50px);
 
   &__group {
     @include flexbox($j: flex-end);
@@ -72,5 +94,13 @@
 
   .button--primary {
     margin-left: rem(16px);
+  }
+
+
+}
+
+.button--burger {
+  @include desktop {
+    display: none;
   }
 }

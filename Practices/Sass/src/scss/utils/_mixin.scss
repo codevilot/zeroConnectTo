@@ -53,6 +53,12 @@
   transform: translate(-50%, -50%);
 }
 
+// transform 관련 믹스인
+@mixin transRotate($tx: -50%, $ty: -50%, $rotate: 0) {
+  top: 50%;
+  transform:translate(-$tx, -$ty) rotate(#{$rotate} + "deg");
+}
+
 /* 1024px */
 @mixin boxSizeMax($min: 768px, $max: $container-width) {
   min-width: $min;
