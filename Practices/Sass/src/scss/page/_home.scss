@@ -1,0 +1,107 @@
+@use "../utils/" as *;
+
+[class*="__title"] {
+  @include flexbox(column, center, center);
+  @include textHeading(18px)
+}
+
+[class*="__summry"] {
+  @include textStyle(15px);
+}
+
+.home {
+
+  margin: rem(16px) re(12px);
+  @include flexbox(column);
+  gap: rem(16px);
+}
+
+.appMain {
+  max-width: 67rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+
+  // @include desktop {
+  //   @include gridbox(12, 10);
+  // }
+
+  grid-template-columns: repeat(11, 1fr);
+}
+
+.news {
+  grid-column-start: 1;
+  grid-column-end: 12;
+
+}
+
+.book {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.twitter {
+  grid-column-start: 8;
+  grid-column-end: 12;
+}
+
+.favorite {
+  grid-column-start: 5;
+  grid-column-end: 8;
+}
+
+.board {
+  grid-column-start: 3;
+  grid-column-end: 12
+}
+
+.book,
+.favorite,
+.twitter {
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.board {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 5;
+}
+
+.book,
+.news,
+.board,
+.favorite,
+.twitter {
+
+  position: relative;
+
+  &__title {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__enTitle {
+    display: block;
+  }
+}
+
+.book__cover {
+  text-align: center;
+}
+
+.board__date {
+  float: right;
+}
+
+.board__more {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.iframeWrapper {
+  @include responseIframe
+}

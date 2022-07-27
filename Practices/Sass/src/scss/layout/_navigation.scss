@@ -5,6 +5,12 @@
 }
 
 .menu {
+  display: none;
+
+  .is--actvie {
+    display: block;
+  }
+
   &__link {
     color: $white;
 

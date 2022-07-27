@@ -1,5 +1,6 @@
 @use "./utils" as *;
 @use "./layout";
+@use "./page";
 
 .a11yHidden {
   @include a11yHidden
