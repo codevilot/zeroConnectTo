@@ -1,0 +1,55 @@
+@use "../utils" as *;
+
+.appNavigation {
+  background-color: $primary-color;
+}
+
+.menu {
+  &__link {
+    color: $white;
+
+  }
+
+  @include desktop {
+    &__list {
+      display: flex;
+      justify-content: space-around;
+      color: $white;
+      max-width: 67rem;
+      margin-left: auto;
+      margin-right: auto;
+
+      height: 5rem;
+      width: 100%;
+      color: $white;
+      align-items: center;
+    }
+  }
+
+  @include mobile {
+    height: 100%;
+    width: 80%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($orange, 0.5);
+
+    padding: rem(20px);
+
+    &__list {
+
+      width: calc(100% - 120px);
+      position: fixed;
+      height: 100%;
+      top: rem(50px);
+      // left: rem(20px);
+
+    }
+
+    &__item {
+      margin-bottom: rem(10px);
+      border-bottom: 1px solid $black;
+    }
+  }
+
+}
