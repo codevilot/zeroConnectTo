@@ -1,9 +1,2 @@
 @use "./utils" as *;
-
-.box {
-  @include flexbox(row);
-}
-
-.appFooter {
-  @include boxSizeMinMax
-}
+@use "./layout";

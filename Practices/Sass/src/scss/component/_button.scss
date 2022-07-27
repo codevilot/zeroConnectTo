@@ -1,0 +1,16 @@
+@use "../utils" as *;
+
+.button {
+  border: 0;
+  padding: rem(4px) rem(8px);
+  border-radius: rem(4px);
+
+  &--fill {
+    background: $secondary-color;
+    color: $white;
+    height: rem(32px);
+    font-size: rem(14px);
+  }
+
+  &--primary {}
+}
